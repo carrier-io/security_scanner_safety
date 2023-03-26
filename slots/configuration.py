@@ -3,7 +3,7 @@ from pylon.core.tools import log, web
 
 class Slot:
     integration_name = 'security_scanner_safety'
-    section_name = 'code_scanners'
+    section_name = 'dependency_scanners'
 
     @web.slot(f'integrations_{section_name}_content')
     def integration_create_modal_content(self, context, slot, payload):

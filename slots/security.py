@@ -4,7 +4,7 @@ from flask import g
 
 class Slot:
     integration_name = 'security_scanner_safety'
-    section_name = 'code_scanners'
+    section_name = 'dependency_scanners'
 
     @web.slot(f'security_{section_name}_content')
     def toggle_content(self, context, slot, payload):

@@ -1,6 +1,6 @@
 from typing import Optional, List
 from pylon.core.tools import log
-from pydantic import BaseModel, validator
+from pydantic import BaseModel
 
 
 class IntegrationModel(BaseModel):
