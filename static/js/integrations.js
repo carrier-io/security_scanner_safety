@@ -76,7 +76,6 @@ const safetyIntegration = {
                 save_intermediates_to,
                 requirements,
                 status,
-                mode,
             } = this
             requirements = this.convertStrToList(requirements)
             return {
@@ -86,7 +85,6 @@ const safetyIntegration = {
                 save_intermediates_to,
                 requirements,
                 status,
-                mode,
             }
         },
         modal() {
