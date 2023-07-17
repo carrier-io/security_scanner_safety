@@ -8,7 +8,7 @@ const safetyIntegration = {
     computed: {
         body_data() {
             let {
-                description,
+                config,
                 is_default,
                 selected_integration: id,
                 save_intermediates_to,
@@ -16,7 +16,7 @@ const safetyIntegration = {
             } = this
             requirements = this.convertStrToList(requirements)
             return {
-                description,
+                config,
                 is_default,
                 id,
                 save_intermediates_to,
@@ -83,6 +83,7 @@ const safetyIntegration = {
 
         initialState: () => ({
             // toggle: false,
+            config: {},
             error: {},
             save_intermediates_to: '/data/intermediates/sast',
             requirements: "requirements.txt",
