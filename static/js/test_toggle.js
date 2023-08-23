@@ -11,7 +11,7 @@ const safetyIntegration = {
                 config,
                 is_default,
                 selected_integration: id,
-                save_intermediates_to,
+                // save_intermediates_to,
                 requirements,
             } = this
             requirements = this.convertStrToList(requirements)
@@ -19,7 +19,7 @@ const safetyIntegration = {
                 config,
                 is_default,
                 id,
-                save_intermediates_to,
+                // save_intermediates_to,
                 requirements,
             }
         },
@@ -33,7 +33,7 @@ const safetyIntegration = {
     methods: {
         convertStrToList(str){
             if (typeof str != "string")
-                return str 
+                return str
 
             if (str.trim()==""){
                 return null
@@ -42,13 +42,13 @@ const safetyIntegration = {
         },
 
         convertListToStr(value){
-            if (!value) 
+            if (!value)
                 return null
-            
+
             isNotArray = !Array.isArray(value)
             if (isNotArray)
                 return value
-            
+
             return value.join(", ")
         },
 
@@ -85,7 +85,7 @@ const safetyIntegration = {
             // toggle: false,
             config: {},
             error: {},
-            save_intermediates_to: '/data/intermediates/sast',
+            // save_intermediates_to: '/data/intermediates/sast',
             requirements: "requirements.txt",
         })
     },
@@ -101,7 +101,7 @@ const safetyIntegration = {
             </div>
             <div class="form-group">
                 <form autocomplete="off">
-                    <h9>Save intermediates to</h9>
+                    <!--<h9>Save intermediates to</h9>
                     <p>
                         <h13>Optional</h13>
                     </p>
@@ -109,7 +109,7 @@ const safetyIntegration = {
                         placeholder=""
                         v-model="save_intermediates_to"
                         :class="{ 'is-invalid': error.save_intermediates_to }">
-                    <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
+                    <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>-->
 
                     <h9>Requirements</h9>
                     <p>
@@ -128,4 +128,3 @@ const safetyIntegration = {
 
 
 register_component('scanner-safety', safetyIntegration)
-
